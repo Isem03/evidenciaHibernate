@@ -2,8 +2,8 @@ package com.mycompany.enviaralumnos;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-
 
 /**
  *
@@ -14,12 +14,13 @@ import jakarta.persistence.Table;
 
 public class entidadUsuarios {
 
-    public entidadUsuarios(String princesa, int par) {
+    public entidadUsuarios() {
     }
-    
-    @Column(name="nombre")
+
+    @Column(name = "nombre")
     private String nombre;
-    @Column(name="pass")
+    @Id
+    @Column(name = "pass")
     private int pass;
 
     public String getNombre() {
@@ -42,7 +43,5 @@ public class entidadUsuarios {
     public String toString() {
         return "entidadUsuarios{" + "nombre=" + nombre + ", pass=" + pass + '}';
     }
-    
-    
-    
+
 }
